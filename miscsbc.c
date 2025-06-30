@@ -254,7 +254,7 @@ struct machine smii_machine =
  */
 U8 multicomp_console_rxpoll (void)
 {
-    unsigned char ch;
+    unsigned char ch = 0;
     if (batch_file) {
         // do not allow the batch file to create an overflow
         if (uart0_rx_fifo.empty || (uart0_rx_fifo.rd != uart0_rx_fifo.wr)) {
@@ -279,6 +279,7 @@ U8 multicomp_console_rxpoll (void)
             }
         }
     }
+    return ch;
 }
 
 

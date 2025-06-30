@@ -223,7 +223,7 @@ typedef struct
 
 typedef struct
 {
-   int used : 1;
+   unsigned used : 1;
    datatype_t type;
    char expr[128];
 } display_t;

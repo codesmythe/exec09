@@ -39,7 +39,7 @@ unsigned int mhz = 1;
    triggered periodically, every so many cycles. Typically this is
    used by the machine to generate a timer interrupt. Off By default.
 */
-unsigned int cycles_per_tick = 0;
+int cycles_per_tick = 0;
 
 /* Nonzero if debugging support is turned on */
 int debug_enabled = 0;

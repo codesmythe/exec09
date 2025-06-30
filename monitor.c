@@ -921,7 +921,7 @@ int dasm (char *buf, absolute_address_t opc)
     }
 
   op_str = (char *) mne[op];
-  if ((op_str == "SWI2") && os9call)
+  if (!strncmp(op_str, "SWI2", 4) && os9call)
     {
       op = fetch8();
       if(op < 0x91)
